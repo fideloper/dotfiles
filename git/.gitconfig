@@ -9,7 +9,9 @@
 
 	#Infoz
 	count = shortlog -sn
-	df = diff --word-diff --color
+	df = diff --color
+	wdf = diff --word-diff --color
+	fdf = diff --name-only --color
 	br = branch -a
 	sh = show --pretty=format: --name-only
 
