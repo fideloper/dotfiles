@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="sorin"
+ZSH_THEME="blinks"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -38,3 +38,25 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+
+# Head to Sites directory
+# or a sub-folder
+# e.g. ss -> cd ~/Sites
+# e.g. ss fideloper -> cd ~/Sites/fideloper
+function go_to_sites() {
+  cd ~/Sites/$1
+}
+alias ss=go_to_sites
+
+# Get Vaprobash Vagrantfile
+alias vapro='curl -L http://bit.ly/vaprobash > Vagrantfile'
+
+# Server current directory from Python
+alias serve='python -m SimpleHTTPServer 8000'
+
+# Vagrant
+alias vst='vagrant status'
+alias vup='vagrant up'
+alias vdo='vagrant halt'
+alias vssh='vagrant ssh'
+  
